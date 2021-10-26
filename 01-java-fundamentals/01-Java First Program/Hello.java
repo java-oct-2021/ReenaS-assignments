@@ -21,12 +21,12 @@ public class Hello {
     OneTo255();
     
    }
-   public static void greet() {
-       System.err.println("Welcome Student!");
+   public static void ()greet {
+       System.out.println("Welcome Student!");
        
    }
    public static void greet(String student) {
-    System.err.printf("Welcome %s", student);
+    System.out.printf("Welcome %s", student);
 }
 public static int add(int i, int j) {
     return i+j;
