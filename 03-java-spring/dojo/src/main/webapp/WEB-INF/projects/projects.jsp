@@ -14,13 +14,16 @@
 <h1>Welcome </h1>
 <p><c:out value="${loogedIn}"/></p>
 <a href="/">Home</a>
-<a href="/projects/new">Create New Stack</a>
+<a href="/projects/new">Create New Project</a>
 
 <table class="table table-dark">
     <thead>
         <tr>
             <th>Project name</th>
             <th>Created By</th>
+            <th>Action</th>
+            <th>Total Likes</th>
+            <th>Liked By </th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +35,16 @@
               <td>
             <c:out value="${project.student.firstName}"/>,
              <c:out value="${project.student.lastName}"/>
+            </td>
+            <td>
+           <a href="/projects/like/${project.id}">Like</a>  
+            </td>
+            <td><c:out value="${project.likers.size()}"/>  </td>
+            <td>
+             <c:forEach items="${project.likers}" var="student">
+             <c:out value="${student.firstName}"/>,
+             </c:forEach>
+            
             </td>
         </tr>
         </c:forEach>

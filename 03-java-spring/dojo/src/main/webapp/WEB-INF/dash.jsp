@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>All students</h1>
-
+<h5><a href="/projects/new"> Create a New Project </a>  </h5>
 <table class="table table-dark">
     <thead>
         <tr>
@@ -20,6 +20,7 @@
             <th>last name</th>
             <th>email</th>
             <th>Action</th>
+            <th>Login</th>
           </tr>
     </thead>
     <tbody>
@@ -42,8 +43,10 @@
 			   <button class="btn btn-info">Edit</button>	
 			</form>
             </td>
-          
-        </tr>
+            <td>
+            <a href="/projects/login/${student.id}">Login</a>
+            </td>
+      	       </tr>
         </c:forEach>
     </tbody>
 </table>

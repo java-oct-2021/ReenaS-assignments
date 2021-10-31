@@ -15,7 +15,8 @@
 
 <div class="container">
 	<h1>Welcome to Coding Dojo!</h1>
-	<h2><a href="/welcome">Dashboard</a></h2>	
+	<h5><a href="/dash">Student Dashboard</a></h2>	
+	<h5><a href="/projects">Project Dashboard</a></h2>	
 	<form:form action="/create" method="post" modelAttribute="newStudent">
 	    <div class="form-group">
 	        <form:label path="firstName">First Name:</form:label>
@@ -36,7 +37,7 @@
 	    <input type="submit" class="btn btn-primary" value="Submit"/>
 	</form:form>    
 	
-	<a href="/dash">dashboard</a>
+	
 	</div>
 
 
