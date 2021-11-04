@@ -15,7 +15,8 @@
 </head>
 <body>
 	<h1>
-		Welcome UserName <%= session.getAttribute("userId") %>
+		Welcome
+		<c:out value="${user.firstName}" />
 	</h1>
 	<a href="/logout">Logout</a>
 	<a href="/projects/new">Create New Project</a>
@@ -29,6 +30,27 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach items="${projects}" var="project">
+				<tr>
+					<td><a href="/projects/project/${project.id}"> <c:out
+								value="${project.projectName}" />
+					</a></td>
+					<td><c:out value="${project.user.firstName}" /></td>
+					<td><c:out value="${project.likers.size()}" /></td>
+					
+					<td>
+				 <c:choose>
+					 <c:when test="${project.likers.contains(user)}">
+							<a href="/projects/unLike/${project.id}">unLike</a>
+					</c:when>
+					<c:otherwise>
+							<a href="/projects/like/${project.id}">Like</a>
+					</c:otherwise>
+					</c:choose>		
+            		
+            		</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 </body>
