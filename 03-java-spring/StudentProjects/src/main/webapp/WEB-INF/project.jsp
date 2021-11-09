@@ -1,9 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<t:partial>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		<a href="/projects">Project Dashboard</a> <a href="/logout">Logout</a>
+	</p>
 	<h1>
 		Project Name:
 		<c:out value="${project.projectName}" />
@@ -28,4 +36,5 @@
 		<a href="/projects/edit/${project.id}">Edit</a>
 	</c:if>
 	
-</t:partial>
+</body>
+</html>

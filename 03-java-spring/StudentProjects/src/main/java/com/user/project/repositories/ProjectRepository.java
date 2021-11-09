@@ -16,27 +16,6 @@ public interface ProjectRepository  extends CrudRepository<Project, Long> {
 	// Delete
 	
 	List<Project> findAll(); 
-	List<Project> findAllByOrderByProjectNameDesc();
-	List<Project> findDistinctByOrderByLikersDesc();
-	
-	@Query("SELECT p FROM Project p")
-    List<Project> findAllProjects();
-	
-	
-	@Query(value="SELECT * from projects", nativeQuery=true)
-    List<Project> findAllprojectsNative();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 
 	

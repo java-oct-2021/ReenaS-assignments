@@ -17,11 +17,7 @@ public class ProjectService {
 
 	// List all projects
 	public List<Project> allProjects() {
-//		return projectRepo.findAll();
-		//return projectRepo.findAllByOrderByProjectNameDesc();
-		//return projectRepo.findDistinctByOrderByLikersDesc();
-//		return projectRepo.findAllProjects();
-		return projectRepo.findAllprojectsNative();
+		return projectRepo.findAll();
 	}
 
 	// Create new project
