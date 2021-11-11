@@ -30,10 +30,7 @@ public class HomeController {
 	
 	@Autowired
 	private  UserValidator validators;
-	
-	
-	
-	
+		
 	@Autowired
 	private ProjectService pService;
 	

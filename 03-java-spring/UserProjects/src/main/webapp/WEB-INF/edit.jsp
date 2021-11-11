@@ -3,23 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page isErrorPage="true"%>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-	crossorigin="anonymous">
+<t:partial>
 
-<title>Insert title here</title>
-</head>
-<body>
-
-	<div class="container">
-		<h1>Edit Project - ${editProject.projectName}</h1>
+		<h5>Edit Project - ${editProject.projectName}</h5>
 		<p>
 			<a href="/projects">Project Dashboard</a> <a href="/logout">Logout</a>
 		</p>
@@ -42,7 +30,7 @@
 			<input type="submit" class="btn btn-primary" value="Submit" />
 		</form:form>
 
-	</div>
+</t:partial>
 
 
 </body>

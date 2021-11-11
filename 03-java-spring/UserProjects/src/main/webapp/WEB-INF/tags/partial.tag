@@ -1,5 +1,4 @@
 <%@ tag language="java" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="f" tagdir="/WEB-INF/tags" %>
 
 <!DOCTYPE html>
 <html>
@@ -13,20 +12,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>
+<div class="container">
+	<h3>
 		Welcome to Coding Dojo
 		<c:out value="${user.firstName}" />
-	</h1>
+	</h3>
+	<img src="/imgs/logo.jpg">
+	
 	<a href="/projects">All Projects</a>
+	
 	<a href="/projects/new">Create New Project</a>
+	<hr>
 	<jsp:doBody/>
 	
 	
 	<hr>
 	<a href="/logout">Logout</a>
 	
-	<f:footer>
-	</f:footer>
+</div>
 </body>
 </html>
 	
